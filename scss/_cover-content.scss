@@ -1,0 +1,12 @@
+.cover-content {
+  height: 600px;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 40px;
+  .cover-img {
+    height: 100%;
+    width: 100%;
+    background-image: url(../images/cover-img1.jpg);
+    background-position: center;
+  }
+}
