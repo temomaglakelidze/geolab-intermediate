@@ -1,9 +1,15 @@
 header {
-  padding: 20px 100px;
+  padding: 27px 100px;
+  background-color: #f5e6df;
+  width: 100%;
+  z-index: 2;
+  position: sticky;
+  top: 0;
   .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     img {
       max-width: 70px;
       width: 100%;
