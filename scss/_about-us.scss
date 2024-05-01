@@ -1,0 +1,10 @@
+.about-us {
+  display: flex;
+  padding-top: 80px;
+  .about-us-content {
+    position: relative;
+    img {
+      position: absolute;
+    }
+  }
+}

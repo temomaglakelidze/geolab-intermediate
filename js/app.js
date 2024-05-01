@@ -31,7 +31,7 @@ function changeSlides() {
   } else {
     plus.style.display = "block";
   }
-  if (slides.length === 1) {
+  if (slides.length <= 1) {
     minus.style.display = "none";
   } else {
     minus.style.display = "block";
