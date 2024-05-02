@@ -8,9 +8,6 @@ function addSlide(x) {
 
 function deductSlide(x) {
   slideIndex -= x;
-  if (slideIndex < 1) {
-    slideIndex = slides.length;
-  }
   changeSlides();
 }
 
@@ -27,15 +24,24 @@ function changeSlides() {
     dots[i].classList.remove("active");
   }
   if (slideIndex === slides.length) {
-    plus.style.display = "none";
+    plus.classList.add("finish");
   } else {
-    plus.style.display = "block";
+    plus.classList.remove("finish");
   }
-  if (slides.length <= 1) {
-    minus.style.display = "none";
+  if (slideIndex === 1) {
+    minus.classList.add("finish");
   } else {
-    minus.style.display = "block";
+    minus.classList.remove("finish");
   }
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].classList.add("active");
+  if (slideIndex === slides.length) {
+    return;
+  }
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].classList.add("zoom");
+  }
+  setTimeout(function () {
+    addSlide(1);
+  }, 5000);
 }

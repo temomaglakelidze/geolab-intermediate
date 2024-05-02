@@ -1,6 +1,12 @@
 .main-cover-content {
+  height: 600px;
   position: relative;
-
+  overflow: hidden;
+  margin-bottom: 30px;
+  .zoom {
+    transform: scale(1.5);
+    transition: transform 10s ease;
+  }
   .slide {
     &:nth-child(1) {
       background-image: url(../images/cover-img1.jpg);
@@ -74,14 +80,17 @@
   .plus {
     right: 0;
   }
+  .finish {
+    opacity: 0.3;
+    pointer-events: none;
+  }
   .circles {
     display: flex;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 10px;
+    bottom: 30px;
     column-gap: 5px;
-
     .circle {
       width: 10px;
       height: 10px;
@@ -90,6 +99,10 @@
       opacity: 0.1;
       padding: 5px 5px;
       cursor: pointer;
+    }
+    .active {
+      background-color: #65317d;
+      opacity: 1;
     }
   }
 }
